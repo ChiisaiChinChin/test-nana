@@ -1,0 +1,288 @@
+body{
+    --main: #561C24;
+    --secondery: #6D2932;
+    --pop1: #C7B7A3;
+    --pop2: #E8D8C4;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--main);
+}
+
+/* HEART */
+
+.d{
+    z-index: 1;
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    left: 25%;
+    width: 240px; /* Adjust size as needed */
+    height: 240px; /* Adjust size as needed */
+    transform: rotate(-45deg);
+    background-color: var(--pop2);
+    border-radius: 15px;
+    box-shadow: 0 50px 30px 20px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+.d:hover{
+    transition: 0.75s ease-in-out;
+    scale: 1.25;
+}
+.d::before,
+.d::after {
+    content: "";
+    position: absolute;
+    width: 220px; /* Same width as .heart */
+    height: 170px; /* Same height as .heart */
+    background-color: var(--pop2); /* Same color as .heart */
+    border-radius: 50%; /* Make them circles */
+}
+.d::before {
+    top: -80px; /* Adjust position to create the top-left curve */
+    left: 8px;
+    scale: 1 1.4 1;
+    rotate: 90deg;
+}
+.d::after {
+    left: 130px; /* Adjust position to create the top-right curve */
+    top: 36px;
+    scale: 1 1.4 1;
+}
+.d:active{
+    transition: 0.12s ease-in-out;
+    --scalefact: 1;
+    scale: var(--scalefact);
+}
+
+.d1{
+    z-index: 0;
+    transition: 2s ease-in-out;
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    left: 25%;
+    width: 240px; /* Adjust size as needed */
+    height: 240px; /* Adjust size as needed */
+    transform: rotate(-45deg);
+    background-color: var(--pop1);
+    border-radius: 15px;
+    box-shadow: 0 50px 30px 20px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+.d1::before,
+.d1::after {
+    content: "";
+    position: absolute;
+    width: 220px; /* Same width as .heart */
+    height: 170px; /* Same height as .heart */
+    background-color: var(--pop1); /* Same color as .heart */
+    border-radius: 50%; /* Make them circles */
+}
+.d1:hover{
+    transition: 2s ease-in-out;
+    scale: 1.1;
+}
+.d1::before {
+    top: -80px; /* Adjust position to create the top-left curve */
+    left: 8px;
+    scale: 1 1.4 1;
+    rotate: 90deg;
+}
+.d1::after {
+    left: 130px; /* Adjust position to create the top-right curve */
+    top: 36px;
+    scale: 1 1.4 1;
+}
+
+.d2{
+    z-index: 0;
+    transition: 2s ease-in-out;
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    left: 25%;
+    width: 240px; /* Adjust size as needed */
+    height: 240px; /* Adjust size as needed */
+    transform: rotate(-45deg);
+    background-color: var(--main);
+    border-radius: 15px;
+    box-shadow: 0 50px 30px 20px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+.d2::before,
+.d2::after {
+    content: "";
+    position: absolute;
+    width: 220px; /* Same width as .heart */
+    height: 170px; /* Same height as .heart */
+    background-color: var(--main); /* Same color as .heart */
+    border-radius: 50%; /* Make them circles */
+}
+.d2:hover{
+    transition: 2s ease-in-out;
+    scale: 1.1;
+}
+.d2::before {
+    top: -80px; /* Adjust position to create the top-left curve */
+    left: 8px;
+    scale: 1 1.4 1;
+    rotate: 90deg;
+}
+.d2::after {
+    left: 130px; /* Adjust position to create the top-right curve */
+    top: 36px;
+    scale: 1 1.4 1;
+}
+
+
+/* Heart Text */
+#PressMeTxt{
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    right: 20%;
+    left: 25%;
+    top: 35%;
+    color: var(--secondery);
+
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: cursive;
+}
+#PressMeTxt:hover ~ .d{
+    transition: 2s ease-in-out;
+    scale: 1.1;
+}
+
+
+#ndPart{
+    transition: 2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    background-color: var(--pop1);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+#ndPartHeader, #rdPartHeader{
+    cursor: pointer;
+    position: absolute;
+    right: 15%;
+    left: 5%;
+    width: 300px;
+    top: 2%;
+    color: var(--secondery);
+
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    /*font-family: 'Great Vibes', cursive;*/
+}
+#ndPartText, #rdPartText{
+    cursor: pointer;
+    position: absolute;
+    right: 15%;
+    left: 10%;
+    width: 400px;
+    height: 700px;
+    top: 10%;
+    color: var(--secondery);
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    margin: 0 15px 0 15px;
+}
+
+#ndPartBtn{
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    width: 40%;
+    height: 5%;
+    bottom: 5%;
+    right: 30%;
+    left: 30%;
+    opacity: 0;
+
+    color: var(--pop1);
+    background-color: var(--main);
+    border-radius: 15px;
+    border: none;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: cursive
+}
+#ndPartBtn{
+    z-index: 4;
+}
+#ndPartBtn:hover{
+    transition: 0.4s ease-in-out;
+    scale: 1.1;
+}
+#ndPartBtn:active{
+    transition: 0.4s ease-in-out;
+    scale: 1.2;
+    color: var(--main);
+    background-color: var(--pop1);
+}
+
+/* third Part */
+#rdPart{
+    transition: 2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    background-color: var(--pop1);
+    position: absolute;
+    z-index: 4;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+#imgO, #imgS{
+    z-index: 5;
+    position: absolute;
+    transform: translateY(0);
+    height: 360px;
+    width: 280px;
+    border-radius: 80px;
+    scale: 0.75;
+}
+#imgO{
+    top: 50%;
+    left: 15%;
+    rotate: -20deg;
+}
+#imgS{
+    top: 50%;
+    right: 5%;
+}
+#em{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+#rdPartBtn{
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    width: 20%;
+    height: 5%;
+    bottom: 2%;
+    right: 30%;
+    left: 5%;
+
+    color: var(--pop1);
+    background-color: var(--main);
+    border-radius: 15px;
+    border: none;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: cursive
+}
